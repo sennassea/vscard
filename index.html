@@ -1,57 +1,149 @@
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>조서현 | 웹 명함</title>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  <link rel="stylesheet" href="style.css">
-  <script src="script.js" defer></script>
-</head>
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+  background-color: #000000;
+  font-family: -apple-system, BlinkMacSystemFont,
+    "Segoe UI", "Pretendard", "Noto Sans KR", sans-serif;
+  color: #ffffff;
+}
 
-<body>
-  <div class="business-card">
+.business-card {
+  width: 100%;
+  max-width: 380px;
+  background: #121214;
+  border-radius: 24px;
+  padding: 40px 32px;
+  text-align: center;
 
-    <div class="profile-image">
-      <img src="프로필1.jpg" alt="조서현 프로필 사진">
-    </div>
+  border: 3px solid #3B38A0;
 
-    <h1 class="name">조서현</h1>
+  box-shadow:
+    0 0 24px rgba(59, 56, 160, 0.25),
+    0 10px 30px rgba(0, 0, 0, 0.6);
+}
 
-    <p class="job-title">개발PM</p>
+.profile-image {
+  width: 130px;
+  height: 130px;
+  margin: 0 auto 28px;
+  border-radius: 50%;
+  overflow: hidden;
 
-    <div class="contact-list">
+  border: 6px solid #7A85C1;
+  background-color: #121214;
 
-      <div class="contact-item">
-        <div class="icon">✉️</div>
+  box-shadow:
+    0 0 16px rgba(122, 133, 193, 0.35);
+}
 
-        <div class="contact-info">
-          <div class="contact-label">이메일</div>
+.profile-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
 
-          <div class="contact-value">
-            <a href="mailto:seohyun@example.com">
-              seohyun@example.com
-            </a>
-          </div>
-        </div>
-      </div>
+.name {
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #ffffff;
+}
 
-      <div class="contact-item">
-        <div class="icon">📞</div>
+.job-title {
+  font-size: 16px;
+  color: #B2B0E8;
+  margin-bottom: 32px;
+}
 
-        <div class="contact-info">
-          <div class="contact-label">전화번호</div>
+.contact-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
 
-          <div class="contact-value">
-            <a href="tel:01012345678">
-              010-1234-5678
-            </a>
-          </div>
-        </div>
-      </div>
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 18px;
 
-    </div>
+  background: rgba(255, 255, 255, 0.05);
 
-  </div>
-</body>
-</html>
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+
+  border: none;
+  border-radius: 18px;
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.08),
+    0 4px 12px rgba(0, 0, 0, 0.25);
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.contact-item:hover {
+  background: rgba(255, 255, 255, 0.07);
+  transform: translateY(-1px);
+}
+
+.icon {
+  font-size: 20px;
+  width: 30px;
+  text-align: center;
+  color: #7A85C1;
+}
+
+.contact-info {
+  text-align: left;
+  flex: 1;
+}
+
+.contact-label {
+  font-size: 12px;
+  color: #B2B0E8;
+  margin-bottom: 4px;
+}
+
+.contact-value {
+  font-size: 15px;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.contact-value a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.contact-value a:hover {
+  color: #B2B0E8;
+  text-decoration: underline;
+}
+
+@media (max-width: 480px) {
+  .business-card {
+    padding: 32px 24px;
+  }
+
+  .profile-image {
+    width: 110px;
+    height: 110px;
+  }
+
+  .name {
+    font-size: 26px;
+  }
+}
