@@ -19,7 +19,7 @@ body {
 .business-card {
   width: 100%;
   max-width: 380px;
-  background: #1A1A1F;
+  background: #121214;
   border-radius: 24px;
   padding: 40px 32px;
   text-align: center;
@@ -39,7 +39,7 @@ body {
   overflow: hidden;
 
   border: 6px solid #7A85C1;
-  background-color: #1A1A1F;
+  background-color: #121214;
 
   box-shadow:
     0 0 16px rgba(122, 133, 193, 0.35);
@@ -77,14 +77,26 @@ body {
   gap: 14px;
   padding: 16px 18px;
 
-  background-color: #0B0D16;
+  background: rgba(255, 255, 255, 0.05);
 
-  border: 1px solid #1A2A80;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
 
-  border-radius: 16px;
+  border: none;
+  border-radius: 18px;
 
   box-shadow:
-    0 0 10px rgba(26, 42, 128, 0.18);
+    inset 0 1px 0 rgba(255, 255, 255, 0.08),
+    0 4px 12px rgba(0, 0, 0, 0.25);
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.contact-item:hover {
+  background: rgba(255, 255, 255, 0.07);
+  transform: translateY(-1px);
 }
 
 .icon {
