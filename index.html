@@ -1,57 +1,55 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>조서현 | 웹 명함</title>
-
-  <link rel="stylesheet" href="style.css">
-  <script src="script.js" defer></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>조서현 | 웹명함</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
-  <div class="business-card">
-
+  <main class="card">
     <div class="profile-image">
-      <img src="프로필1.jpg" alt="조서현 프로필 사진">
+      <img src="프로필1.jpg" alt="조서현 프로필 이미지" />
     </div>
 
-    <h1 class="name">조서현</h1>
+    <h1>조서현</h1>
+    <p class="job">개발PM</p>
 
-    <p class="job-title">개발PM</p>
+    <p class="intro">
+      문제를 빠르게 파악하고 해결까지 이끌어내는 PM입니다.
+    </p>
+
+    <div class="tags">
+      <span>#역량1</span>
+      <span>#역량2</span>
+      <span>#역량3</span>
+    </div>
 
     <div class="contact-list">
+      <button class="contact-item copy-btn" data-copy="sennassea@gmail.com">
+        <span class="icon">✉</span>
+        <span>sennassea@gmail.com</span>
+      </button>
 
-      <div class="contact-item">
-        <div class="icon email-icon">✉</div>
+      <button class="contact-item copy-btn" data-copy="010-0000-0000">
+        <span class="icon">☎</span>
+        <span>010-0000-0000</span>
+      </button>
 
-        <div class="contact-info">
-          <div class="contact-label">이메일</div>
+      <a class="contact-item link-btn" href="https://github.com/sennassea" target="_blank">
+        <span class="icon">⌘</span>
+        <span>Github</span>
+      </a>
 
-          <div class="contact-value">
-            <a href="mailto:seohyun@example.com">
-              seohyun@example.com
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <div class="contact-item">
-        <div class="icon phone-icon">☎</div>
-
-        <div class="contact-info">
-          <div class="contact-label">전화번호</div>
-
-          <div class="contact-value">
-            <a href="tel:01012345678">
-              010-1234-5678
-            </a>
-          </div>
-        </div>
-      </div>
-
+      <button class="contact-item link-btn portfolio-btn" type="button">
+        <span class="icon">◈</span>
+        <span>Portfolio</span>
+      </button>
     </div>
 
-  </div>
+    <p class="copy-message" id="copyMessage">복사되었습니다.</p>
+  </main>
+
+  <script src="script.js"></script>
 </body>
 </html>
