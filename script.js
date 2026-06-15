@@ -3,13 +3,13 @@ const copyMessage = document.getElementById("copyMessage");
 
 copyButtons.forEach((button) => {
   button.addEventListener("click", async () => {
-    const textToCopy = button.dataset.copy;
+    const copyText = button.dataset.copy;
 
     try {
-      await navigator.clipboard.writeText(textToCopy);
+      await navigator.clipboard.writeText(copyText);
       showCopyMessage();
     } catch (error) {
-      copyFallback(textToCopy);
+      fallbackCopy(copyText);
       showCopyMessage();
     }
   });
@@ -23,7 +23,7 @@ function showCopyMessage() {
   }, 1400);
 }
 
-function copyFallback(text) {
+function fallbackCopy(text) {
   const textarea = document.createElement("textarea");
   textarea.value = text;
   document.body.appendChild(textarea);

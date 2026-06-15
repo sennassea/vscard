@@ -9,64 +9,68 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 24px;
-  background: linear-gradient(135deg, #f5f7fa, #eef2f7);
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
-    "Pretendard", "Noto Sans KR", sans-serif;
-  color: #1f2937;
+  background: #000;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Pretendard",
+    "Noto Sans KR", sans-serif;
+  color: #fff;
 }
 
-.card {
-  width: 100%;
-  max-width: 380px;
-  padding: 36px 28px;
-  background-color: #ffffff;
+.business-card {
+  width: 475px;
+  min-height: 635px;
+  padding: 52px 42px;
+  background: #151518;
+  border: 3px solid #4e48c8;
   border-radius: 28px;
+  box-shadow: 0 0 35px rgba(78, 72, 200, 0.25);
   text-align: center;
-  box-shadow: 0 18px 45px rgba(31, 41, 55, 0.12);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.card:hover {
+.business-card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 28px 60px rgba(31, 41, 55, 0.18);
+  box-shadow: 0 18px 55px rgba(78, 72, 200, 0.45);
 }
 
-.profile-image {
-  width: 124px;
-  height: 124px;
-  margin: 0 auto 22px;
+.profile-wrap {
+  width: 162px;
+  height: 162px;
+  margin: 0 auto 38px;
   border-radius: 50%;
-  overflow: hidden;
-  background-color: #e5e7eb;
-  border: 4px solid #ffffff;
-  box-shadow: 0 10px 25px rgba(31, 41, 55, 0.16);
+  padding: 3px;
+  background: linear-gradient(135deg, #b7b0ff, #5550c8);
+  box-shadow: 0 0 28px rgba(150, 145, 255, 0.45);
 }
 
-.profile-image img {
+.profile-img {
   width: 100%;
   height: 100%;
+  display: block;
+  border-radius: 50%;
   object-fit: cover;
 }
 
 h1 {
-  font-size: 28px;
-  font-weight: 700;
-  margin-bottom: 6px;
+  margin-bottom: 12px;
+  font-size: 36px;
+  font-weight: 800;
+  letter-spacing: -1px;
+  text-shadow: 3px 3px 0 #e93158, -3px 3px 0 #28c7ff;
 }
 
 .job {
-  font-size: 16px;
-  font-weight: 600;
-  color: #6b7280;
-  margin-bottom: 16px;
+  margin-bottom: 18px;
+  font-size: 20px;
+  color: #9ea0ff;
+  font-weight: 500;
 }
 
 .intro {
+  margin: 0 auto 14px;
+  max-width: 360px;
   font-size: 15px;
   line-height: 1.6;
-  color: #374151;
-  margin-bottom: 14px;
+  color: #e6e6f0;
 }
 
 .tags {
@@ -74,60 +78,80 @@ h1 {
   justify-content: center;
   gap: 8px;
   flex-wrap: wrap;
-  margin-bottom: 26px;
+  margin-bottom: 28px;
 }
 
 .tags span {
-  padding: 7px 11px;
+  padding: 7px 12px;
   border-radius: 999px;
-  background-color: #f3f4f6;
-  color: #4b5563;
+  background: #222226;
+  border: 1px solid #333345;
+  color: #aaaaff;
   font-size: 13px;
-  font-weight: 500;
+  font-weight: 600;
 }
 
-.contact-list {
+.info-list {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 18px;
 }
 
-.contact-item {
+.info-box {
   width: 100%;
-  min-height: 48px;
+  min-height: 90px;
+  padding: 20px 28px;
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 10px;
-  padding: 13px 16px;
-  border: 1px solid #e5e7eb;
-  border-radius: 16px;
-  background-color: #ffffff;
-  color: #374151;
-  font-size: 15px;
-  font-weight: 500;
+  gap: 24px;
+  border: none;
+  border-radius: 21px;
+  background: #222225;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06),
+    0 8px 18px rgba(0, 0, 0, 0.25);
+  color: inherit;
   text-decoration: none;
   cursor: pointer;
-  transition: background-color 0.25s ease, transform 0.25s ease, border-color 0.25s ease;
+  text-align: left;
+  transition: transform 0.25s ease, background 0.25s ease;
 }
 
-.contact-item:hover {
-  background-color: #f9fafb;
-  border-color: #d1d5db;
-  transform: translateY(-2px);
+.info-box:hover {
+  transform: translateY(-3px);
+  background: #29292d;
 }
 
 .icon {
-  font-size: 18px;
+  width: 26px;
+  font-size: 23px;
+  color: #999be8;
+  text-align: center;
   font-weight: 700;
-  line-height: 1;
+}
+
+.text-area {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.label {
+  font-size: 15px;
+  color: #aaaaff;
+  font-weight: 500;
+}
+
+.value {
+  font-size: 18px;
+  color: #f5f5f5;
+  font-weight: 700;
 }
 
 .copy-message {
-  height: 20px;
+  height: 18px;
   margin-top: 16px;
   font-size: 13px;
-  color: #2563eb;
+  color: #aaaaff;
   opacity: 0;
   transition: opacity 0.25s ease;
 }

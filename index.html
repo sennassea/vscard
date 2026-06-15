@@ -7,9 +7,9 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <main class="card">
-    <div class="profile-image">
-      <img src="프로필1.jpg" alt="조서현 프로필 이미지" />
+  <main class="business-card">
+    <div class="profile-wrap">
+      <img src="프로필1.jpg" alt="조서현 프로필 이미지" class="profile-img" />
     </div>
 
     <h1>조서현</h1>
@@ -25,29 +25,41 @@
       <span>#역량3</span>
     </div>
 
-    <div class="contact-list">
-      <button class="contact-item copy-btn" data-copy="sennassea@gmail.com">
+    <section class="info-list">
+      <button class="info-box copy-btn" data-copy="seohyun@example.com">
         <span class="icon">✉</span>
-        <span>sennassea@gmail.com</span>
+        <span class="text-area">
+          <span class="label">이메일</span>
+          <span class="value">seohyun@example.com</span>
+        </span>
       </button>
 
-      <button class="contact-item copy-btn" data-copy="010-0000-0000">
+      <button class="info-box copy-btn" data-copy="010-1234-5678">
         <span class="icon">☎</span>
-        <span>010-0000-0000</span>
+        <span class="text-area">
+          <span class="label">전화번호</span>
+          <span class="value">010-1234-5678</span>
+        </span>
       </button>
 
-      <a class="contact-item link-btn" href="https://github.com/sennassea" target="_blank">
+      <a class="info-box" href="https://github.com/sennassea" target="_blank">
         <span class="icon">⌘</span>
-        <span>Github</span>
+        <span class="text-area">
+          <span class="label">링크</span>
+          <span class="value">Github</span>
+        </span>
       </a>
 
-      <button class="contact-item link-btn portfolio-btn" type="button">
+      <button class="info-box" type="button">
         <span class="icon">◈</span>
-        <span>Portfolio</span>
+        <span class="text-area">
+          <span class="label">링크</span>
+          <span class="value">Portfolio</span>
+        </span>
       </button>
-    </div>
+    </section>
 
-    <p class="copy-message" id="copyMessage">복사되었습니다.</p>
+    <p id="copyMessage" class="copy-message">복사되었습니다.</p>
   </main>
 
   <script src="script.js"></script>
