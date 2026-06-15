@@ -16,9 +16,9 @@ body {
 }
 
 .business-card {
-  width: 430px;
-  min-height: 575px;
-  padding: 42px 36px;
+  width: 410px;
+  min-height: 545px;
+  padding: 38px 34px;
   background: #151518;
   border: 3px solid #4e48c8;
   border-radius: 28px;
@@ -33,9 +33,9 @@ body {
 }
 
 .profile-wrap {
-  width: 146px;
-  height: 146px;
-  margin: 0 auto 30px;
+  width: 136px;
+  height: 136px;
+  margin: 0 auto 26px;
   border-radius: 50%;
   padding: 3px;
   background: linear-gradient(135deg, #b7b0ff, #5550c8);
@@ -52,7 +52,7 @@ body {
 
 h1 {
   margin-bottom: 12px;
-  font-size: 32px;
+  font-size: 31px;
   font-weight: 800;
   letter-spacing: -1px;
   color: #ffffff;
@@ -94,13 +94,13 @@ h1 {
 .info-list {
   display: flex;
   flex-direction: column;
-  gap: 18px;
+  gap: 16px;
 }
 
 .info-box {
   width: 100%;
-  min-height: 84px;
-  padding: 18px 26px;
+  min-height: 78px;
+  padding: 16px 24px;
   display: flex;
   align-items: center;
   gap: 24px;
@@ -129,6 +129,17 @@ h1 {
   font-weight: 700;
 }
 
+.line-icon svg {
+  width: 24px;
+  height: 24px;
+  display: block;
+  fill: none;
+  stroke: #999be8;
+  stroke-width: 2.2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
 .text-area {
   display: flex;
   flex-direction: column;
@@ -149,13 +160,13 @@ h1 {
 
 .link-row {
   display: flex;
-  gap: 18px;
+  gap: 16px;
 }
 
 .link-box {
-  min-height: 72px;
+  min-height: 68px;
   justify-content: center;
-  padding: 18px 16px;
+  padding: 16px 14px;
   gap: 10px;
 }
 
